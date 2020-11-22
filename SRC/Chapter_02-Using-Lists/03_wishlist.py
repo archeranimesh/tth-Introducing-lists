@@ -20,13 +20,15 @@ for book in books:
 
 
 def display_wishlist(display_name, wishes):
+    # copy the original list coming in.
+    items = wishes.copy()
     """
     displays a wishlist as per the param passed.
     """
     print(display_name + " :")
-    suggested_gift = wishes.pop(0)
+    suggested_gift = items.pop(0)
     print("=======>", suggested_gift, "<==========")
-    for wish in wishes:
+    for wish in items:
         print("* " + wish)
     print()
 
@@ -35,4 +37,14 @@ display_wishlist("Books", books)
 display_wishlist("Video Games", video_games)
 display_wishlist("Video Games", video_games)
 display_wishlist("Video Games", video_games)
+print(video_games)
 # display_wishlist("Video Games", video_games)
+
+# list and for loops
+inventory = ["shield", "apple", "sword", "bow", "boomerang"]
+# remove an element by value.
+inventory.remove("apple")
+print(inventory)
+for item in inventory:
+    print(inventory, "item", item)
+    inventory.remove(item)
